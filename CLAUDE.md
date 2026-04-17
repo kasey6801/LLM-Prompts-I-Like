@@ -2,48 +2,59 @@
 
 This project captures and stores LLM prompts as markdown files, synced to GitHub.
 
-## Prompt Capture Workflow
+## Slash Commands
 
-### Capture an existing prompt
-When the user says any of: "capture this prompt", "save this prompt", "add this to the collection" — or similar phrasing:
-1. Confirm: "Got it — I'll save this as a new prompt file. Here's what I'll capture: [repeat the prompt]"
-2. Ask for a short title and any tags if not obvious from context
-3. Write the file (see format below)
-4. `git add`, `git commit -m "Add: <title>"`, `git push`
+| Command | Description |
+|---|---|
+| `/capture-prompt` | Interactively capture an existing prompt with full metadata |
+| `/create-prompt [topic]` | Draft, refine, and save a new prompt for a given topic |
 
-### Create a new prompt for a topic
-When the user says "create a prompt for [topic]" or "write a prompt about [topic]":
-1. Draft the prompt and present it to the user
-2. Refine iteratively based on feedback
-3. When the user approves ("looks good", "save it", "that's the one"), write the file
-4. `git add`, `git commit -m "Add: <title>"`, `git push`
+## Prompt File Format
 
-## File Format
-
-**Path**: `/Users/kcharles/ClaudeDev/CC_LLM_Prompts_I_Like/YYYY-MM-DD_short-slug.md`
+**Filename**: `YYYY-MM-DD_short-slug_v<version>.md`
 
 **Content**:
 ```markdown
 ---
 title: "Prompt Title"
+version: "1.0"
 date: YYYY-MM-DD
 tags: [tag1, tag2]
 ---
 
-The prompt text goes here.
+## Intended Use
+What this prompt is designed to accomplish.
+
+## Original Prompt
+The raw, unmodified prompt the user started with.
+
+## Tool Used
+The tool or model used to generate/refine the modified prompt (e.g., Claude Sonnet 4.6).
+
+## Modified Prompt
+The final, refined version of the prompt.
 ```
 
-## Git Commands
+## Fields
 
+- **Title**: Short descriptive name
+- **Version**: Semantic version (1.0, 1.1, 2.0). Increment minor for small edits, major for rewrites.
+- **Date**: Date the prompt was saved (YYYY-MM-DD)
+- **Tags**: 1–3 descriptive tags
+- **Intended Use**: One sentence describing what the prompt accomplishes
+- **Original Prompt**: The raw user input before any refinement
+- **Tool Used**: Model or tool that helped generate/refine the modified prompt
+- **Modified Prompt**: The final polished prompt to reuse
+
+## Git Workflow
+
+After writing any prompt file:
 ```bash
 cd /Users/kcharles/ClaudeDev/CC_LLM_Prompts_I_Like
 git add <filename>
-git commit -m "Add: <title>"
+git commit -m "Add: <title> v<version>"
 git push
 ```
 
-## Notes
-- Use today's date for the filename
-- Keep slugs lowercase with hyphens
-- Tags should be 1-3 descriptive words
-- The GitHub remote is: `https://github.com/kasey6801/LLM-Prompts-I-Like`
+## GitHub Remote
+`https://github.com/kasey6801/LLM-Prompts-I-Like`

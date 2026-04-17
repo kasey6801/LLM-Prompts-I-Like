@@ -1,0 +1,47 @@
+Capture a prompt into the LLM Prompts I Like collection.
+
+Follow these steps exactly:
+
+1. Check `/Users/kcharles/ClaudeDev/CC_LLM_Prompts_I_Like/` for any existing prompt files with a similar title or slug to determine the current version. If none found, the current version is "none" and suggest starting at `1.0`.
+
+2. Ask the user for the following fields, one at a time, waiting for each answer before asking the next:
+   - **Title**: A short descriptive title for this prompt
+   - **Version**: Tell the user the current version (e.g., "Current version: 1.0 — what version should this be saved as?"). Suggest the next logical increment (e.g., 1.0 → 1.1 for minor changes, 1.0 → 2.0 for major rewrites). If no prior version, suggest `1.0`.
+   - **Intended Use**: What is this prompt designed to accomplish? (one sentence)
+   - **Original Prompt**: The raw, unmodified prompt the user started with
+   - **Tool Used**: What tool or model was used to generate or refine the modified prompt? (e.g., Claude Sonnet 4.6, ChatGPT-4o, manual, etc.)
+   - **Modified Prompt**: The final, refined version of the prompt to save
+   - **Tags**: 1–3 descriptive tags (comma-separated)
+
+3. Present a preview of the file content and ask the user to confirm before saving.
+
+4. Once confirmed, write the file to `/Users/kcharles/ClaudeDev/CC_LLM_Prompts_I_Like/` using this format:
+   - Filename: `YYYY-MM-DD_short-slug_v<version>.md` (use today's date, derive slug from title)
+   - Content:
+     ```
+     ---
+     title: "<title>"
+     version: "<version>"
+     date: YYYY-MM-DD
+     tags: [tag1, tag2]
+     ---
+
+     ## Intended Use
+     <intended use>
+
+     ## Original Prompt
+     <original prompt>
+
+     ## Tool Used
+     <tool used>
+
+     ## Modified Prompt
+     <modified prompt>
+     ```
+
+5. After writing the file, run:
+   ```bash
+   cd /Users/kcharles/ClaudeDev/CC_LLM_Prompts_I_Like && git add <filename> && git commit -m "Add: <title> v<version>" && git push
+   ```
+
+6. Confirm to the user that the prompt was saved and pushed to GitHub.
