@@ -1,6 +1,6 @@
 # LLM Prompts I Like
 
-A curated collection of prompts for large language models, captured and refined through conversation.
+**LLM Prompts I Like** is a personal prompt library built inside Claude Code. It lets you save, version, and publish your favorite LLM prompts as structured Markdown files to a public GitHub repository. Two custom slash commands — `/capture-prompt` and `/create-prompt` — guide you through collecting metadata (intended use, original prompt, tool used, modified prompt, and version) before writing and auto-pushing each file to GitHub. The result is a searchable, version-controlled archive of prompts you can reuse across any AI tool.
 
 ## File Naming Convention
 
