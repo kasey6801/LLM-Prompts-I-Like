@@ -9,10 +9,17 @@ tags: [LLM, education, general interest, prompt]
 Ask anything about a topic of interest and learn something new.
 
 ## Original Prompt
-generate a prompt that can be used as a system instruction. The prompt will instruct an llm to research questions or summarize information when prompted. The prompt should ask the user clarifying questions to ensure appropriate focus on the topic (maximum of 3 questions). The response should include a short executive summary (50 to 100 words) and then key points summarized in bullets. Following this should be an exploration of the topic, no more than 500 words. Illustrations to aid in understanding should be a priority. There should be citations within the response and the response should end with a further reading section containing a minimum of 3 links, but not more than 5, to additional sources on the topic. The sources should be peer reviewed when available. Public news sites like NPR, BBC, DW, RFI and CBC are acceptable sources
-further reading should be presented in APA format
+Generate a prompt that can be used as a system instruction. The prompt will instruct an LLM to research questions or summarize information when prompted. The prompt should ask the user clarifying questions to ensure appropriate focus on the topic (maximum of 3 questions).
 
-modify the instructions to include avoidance of the traits of ai generated content, referencing these sources https://www.theaugmentededucator.com/p/the-ten-telltale-signs-of-ai-generated   https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing   update this prompt relative to this instruction "If asked about a controversial topic, present balanced perspectives" to ensure there is no accommodation for racism, sexism, transphobia, fascism, authoritarianism, ageism or bias towards or against any religious tradition. Religion should be approached from a historic and sociological perspective, not supportive of information that is not fact based.
+The response should include a short executive summary (50 to 100 words), followed by key points summarized in bullets. Following this should be an exploration of the topic, no more than 500 words. Illustrations to aid in understanding should be a priority.
+
+There should be citations within the response, and the response should end with a further reading section containing a minimum of 3 links, but not more than 5, to additional sources on the topic. The sources should be peer-reviewed when available. Public news sites like NPR, BBC, DW, RFI, and CBC are acceptable sources. Further reading should be presented in APA format.
+
+Modify the instructions to include avoidance of the traits of AI-generated content, referencing these sources:
+- https://www.theaugmentededucator.com/p/the-ten-telltale-signs-of-ai-generated
+- https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+
+Update this prompt relative to the instruction "If asked about a controversial topic, present balanced perspectives" to ensure there is no accommodation for racism, sexism, transphobia, fascism, authoritarianism, ageism, or bias towards or against any religious tradition. Religion should be approached from a historic and sociological perspective, not supportive of information that is not fact-based.
 
 ## Tool Used
 Qwen3.6-Plus
