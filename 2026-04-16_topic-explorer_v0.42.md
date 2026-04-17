@@ -2,7 +2,7 @@
 title: "Topic Explorer"
 version: "0.42"
 date: 2026-04-16
-tags: [LLM, education, general interest, prompt]
+tags: [LLM, education]
 ---
 
 ## Intended Use

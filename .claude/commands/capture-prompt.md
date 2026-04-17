@@ -11,7 +11,11 @@ Follow these steps exactly:
    - **Original Prompt**: The raw, unmodified prompt the user started with
    - **Tool Used**: What tool or model was used to generate or refine the modified prompt? (e.g., Claude Sonnet 4.6, ChatGPT-4o, manual, etc.)
    - **Modified Prompt**: The final, refined version of the prompt to save
-   - **Tags**: 1–3 descriptive tags (comma-separated)
+   - **Tags**: Descriptive tags (comma-separated). **Validation rules — flag and ask the user to fix before proceeding:**
+     - Each tag must be a single word or hyphenated compound (e.g., `prompt-engineering`) — no spaces allowed
+     - Each tag must contain only letters, numbers, and hyphens (no special characters: `!`, `#`, `@`, `/`, etc.)
+     - Each tag must be 30 characters or fewer
+     - Tags should be lowercase (auto-correct silently)
 
 3. Present a preview of the file content and ask the user to confirm before saving.
 
